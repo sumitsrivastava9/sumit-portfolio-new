@@ -21,7 +21,7 @@ function About() {
           <div className="about__content" data-aos="fade-up">
             <p>
               Hello! I'm a junior software engineer with experience
-              in web development. In 5 months at Studio Graphene, I contributing
+              in web development. In 6 months at Studio Graphene, I contributing
               to projects like PULSE—an internal monitoring tool. Holding a
               Bachelor's in Technology from Gurukula Kangri University, I
               showcase practical applications of my skills in impactful projects
