@@ -15,7 +15,7 @@ function Home() {
     })
     return (
         <>
-            <div id="home" >
+            <div id="home">
                 <div className="home__parent" >
                     <div className="home__text" >
                         <motion.p className="home__para"
