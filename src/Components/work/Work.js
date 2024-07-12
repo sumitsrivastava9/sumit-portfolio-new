@@ -37,7 +37,7 @@ function Work() {
     },
     {
       _id: 2,
-      name: 'Todo App',
+      name: 'PassWord Manager',
       url: 'https://todo-app-tau-lac.vercel.app/',
       image:
         'https://res.cloudinary.com/dm46dmseq/image/upload/v1657602470/todo_eypvhq.jpg',
