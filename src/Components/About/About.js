@@ -5,7 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 function About() {
-  const [monthsAtGraphene, setMonthsAtGraphene] = useState(0);
+  const [experience, setExperience] = useState({ years: 0, months: 0, days: 0 });
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -13,16 +13,27 @@ function About() {
     const dateCalculation = () => {
       const currentDate = new Date();
       const startDate = new Date("2023-10-09");
-      const diffTime = currentDate - startDate;
 
-      const diffMonths =
-        (currentDate.getFullYear() - startDate.getFullYear()) * 12 +
-        (currentDate.getMonth() - startDate.getMonth());
+      let years = currentDate.getFullYear() - startDate.getFullYear();
+      let months = currentDate.getMonth() - startDate.getMonth();
+      let days = currentDate.getDate() - startDate.getDate();
 
-      return diffMonths;
+      // Adjust negative values
+      if (days < 0) {
+        months -= 1;
+        const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+        days += prevMonth.getDate(); // Add previous month's days
+      }
+
+      if (months < 0) {
+        years -= 1;
+        months += 12;
+      }
+
+      return { years, months, days };
     };
 
-    setMonthsAtGraphene(dateCalculation());
+    setExperience(dateCalculation());
   }, []);
 
   return (
@@ -35,10 +46,10 @@ function About() {
         <div className="about__content" data-aos="fade-up">
           <p>
             {`Hello! I'm a junior software engineer with experience in web development. 
-            In ${monthsAtGraphene} months at Studio Graphene, I contribute to projects 
-            like PULSE—an internal monitoring tool. Holding a Bachelor's in Technology 
-            from Gurukula Kangri University, I showcase practical applications of my 
-            skills in impactful projects over 2 years in Software Development. 
+            In ${experience.years} years, ${experience.months} months, and ${experience.days} days 
+            at Studio Graphene, I contribute to projects like PULSE—an internal monitoring tool. 
+            Holding a Bachelor's in Technology from Gurukula Kangri University, I showcase practical 
+            applications of my skills in impactful projects over 2 years in Software Development. 
             Eager to connect for collaborative opportunities.`}
           </p>
         </div>
