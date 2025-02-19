@@ -98,7 +98,7 @@ function Contact() {
               <p className="contact__info__p">CONTACT INFO</p>
               <div className="contact__right__box">
                 <p>My offline Presence</p>
-                <h1>Gobarsahi, muzaffarpur Bihar- 842001</h1>
+                <h1>Jal vihar sector 46, Gurgaon</h1>
               </div>
               <div className="contact__right__box">
                 <p>Email Me</p>

@@ -45,8 +45,8 @@ function About() {
         </div>
         <div className="about__content" data-aos="fade-up">
           <p>
-            {`Hello! I'm a junior software engineer with experience in web development. 
-            In ${experience.years} years, ${experience.months} months, and ${experience.days} days 
+            {`Hello! I'm a Software Engineer with experience in Frontend development. 
+            In ${experience.years} years, ${experience.months + 1} months, and ${experience.days} days 
             at Studio Graphene, I contribute to projects like PULSE—an internal monitoring tool. 
             Holding a Bachelor's in Technology from Gurukula Kangri University, I showcase practical 
             applications of my skills in impactful projects over 2 years in Software Development. 
@@ -63,7 +63,7 @@ function About() {
           </div>
           <div className="box" data-aos="fade-up">
             <h1>
-              <CountUp start={0} end={7} duration={1} />
+              <CountUp start={0} end={10} duration={1} />
             </h1>
             <p>Projects Completed</p>
           </div>
